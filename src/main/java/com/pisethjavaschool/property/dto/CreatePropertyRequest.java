@@ -12,7 +12,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public record CreatePropertyRequest(
-        @NotNull UUID ownerId,
         @NotBlank @Size(max = 150) String name,
         @NotNull BusinessType businessType,
         @Size(max = 3000) String description,

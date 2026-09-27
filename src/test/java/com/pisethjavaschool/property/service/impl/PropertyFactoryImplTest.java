@@ -8,10 +8,10 @@ import com.pisethjavaschool.property.enums.BusinessType;
 import com.pisethjavaschool.property.enums.PropertyStatus;
 
 class PropertyFactoryImplTest {
-    @Test
+	@Test
     void shouldCreateRestaurantDraft() {
         var ownerId = UUID.randomUUID();
-        var request = new CreatePropertyRequest(ownerId, "Piseth Restaurant", BusinessType.RESTAURANT, null, null, null, null, null, "12", "1201", null, null, "Phnom Penh", null, null, null, null);
+        var request = new CreatePropertyRequest("Piseth Restaurant", BusinessType.RESTAURANT, null, null, null, null, null, "12", "1201", null, null, "Phnom Penh", null, null, null, null);
         var property = new PropertyFactoryImpl().createDraft(ownerId, request);
         assertEquals(ownerId, property.getOwnerId());
         assertEquals(BusinessType.RESTAURANT, property.getBusinessType());

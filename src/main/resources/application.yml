@@ -30,3 +30,12 @@ management:
 logging:
   level:
     com.pisethjavaschool.property: INFO
+
+platform:
+  clients:
+    user:
+      base-url: ${USER_SERVICE_URL:http://localhost:8089}
+    property-owner:
+      base-url: ${PROPERTY_OWNER_SERVICE_URL:http://localhost:8069}
+    access-control:
+      base-url: ${ACCESS_CONTROL_SERVICE_URL:http://localhost:8097}		
